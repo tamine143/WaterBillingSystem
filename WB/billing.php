@@ -11,7 +11,7 @@
     $cutting_date = $_POST['cutting_date'];
     $bill_amount = $_POST['bill_amount'];
 
-     $insert_bill = "INSERT INTO `billing` (`billing_id`, `Account_no`, `billing_date`, `present_reading`, `previous_reading`, `due_date`, `cutting_date`, `bill_amount`) VALUES ('$billing_id', '$Account_no', '$billing_date', '$present_reading', '$previous_reading', '$due_date', '$cutting_date', '$billing_date')";
+     $insert_bill = "INSERT INTO `billing` (`billing_id`, `Account_no`, `billing_date`, `present_reading`, `previous_reading`, `due_date`, `cutting_date`, `bill_amount`) VALUES ('$billing_id', '$Account_no', '$billing_date', '$present_reading', '$previous_reading', '$due_date', '$cutting_date', '$bill_amount')";
     
     
     if (mysqli_query($con, $insert_bill)) {
@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="style.css">
 <?php include('style.php')?>
 </head>
-<body>
+<body style="background-color: skyblue;">
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Water Bill Info</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

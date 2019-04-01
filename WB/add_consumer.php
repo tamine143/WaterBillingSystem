@@ -51,7 +51,7 @@
 <link rel="stylesheet" href="style.css">
 <?php include('style.php')?>
 </head>
-<body>
+<body style="background-color: skyblue;">
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Water Bill Info</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,15 +71,9 @@
           <a class="dropdown-item" href="add_consumer.php">Add Consumer</a>
           <a class="dropdown-item" href="list.php">List of Consumer</a>
       </li>
-                        <li class="nav-item dropdown active">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Billing
-                          </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="resedential.php">Resedential</a>
-                              <a class="dropdown-item" href="commercial.php">Commercial</a>
-                        </li>  
-      <li class="nav-item dropdown active">
+                 <li class="nav-item active">
+                    <a class="nav-link" href="billing.php">Billing</a>
+                </li>      <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Other
         </a>

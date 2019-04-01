@@ -11,7 +11,7 @@ require 'dbconfig/config.php';
 <link rel="stylesheet" type="text/css" href="style.css">
 <?php include('style.php')?>
 </head>
-<body>
+<body style="background-color: skyblue;">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Water Bill Info</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,6 +73,7 @@ require 'dbconfig/config.php';
         <tr>
           <th>pwd</th>
           <th>senior</th>
+          <th colspan='1'>Action</th>
         </tr>
 
         <?php
@@ -80,6 +81,9 @@ require 'dbconfig/config.php';
             echo "<tr>";?>
             <td><?php echo $discount['pwd'] ?></td>
             <td><?php echo $discount['senior'] ?></td>
+            <td>
+              <a href="edit_discount.php?edit_account=<?php echo $consumer['Account_no']; ?>"><i class="fas fa-user-edit    "></i></a>
+            </td>
         <?php }
         ?>
       </table>

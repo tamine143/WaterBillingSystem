@@ -29,7 +29,7 @@
 			array_push($error, "Invalid username pr password");
 			}
 		}
-	}		
+	}	
 ?>
 
 <!DOCTYPE.html>
@@ -39,12 +39,12 @@
 			<link rel="stylesheet" type="text/css" href="style.css">
 				<?php include('style.php')?>
 	</head>
-<body>
+<body style="background-color: skyblue;">
 	<div class="container" style="width: 500px;
     	border: solid 10px;
     	border-radius: 4px;
     	margin-top: 65px;
-    	background-color: gray;
+    	background-color: skyblue;
 	}">
 	<h2 align="center">WATER BILLING SYSTEM</h2><hr>
 	<form method="post">
