@@ -80,7 +80,7 @@ require 'dbconfig/config.php';
       		<th>Due Date</th>
       		<th>Cutting Date</th>
       		<th>Bill Amount</th>
-          <th colspan='3'>Action</th>
+          <th colspan='4'>Action</th>
       	</tr>
 
       	<?php
@@ -102,6 +102,9 @@ require 'dbconfig/config.php';
             </td>
 						<td>
 							<a href="edit_bill.php?edit_account=<?php echo $consumer['Account_no']; ?>"><i class="fas fa-user-edit    "></i></a>
+            </td>
+            <td>
+              <a href="new_bill.php?account_no=<?php echo $consumer['Account_no']; ?>&present_reading=<?php echo $consumer['present_reading']; ?>"><i class="fas fa-money-bill"></i></a>
 						</td>
 					</tr>
       	<?php	}

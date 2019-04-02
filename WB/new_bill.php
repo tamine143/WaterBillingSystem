@@ -86,7 +86,7 @@
 
 
       <center>
-                <h1>Add Bill</h1>
+                <h1>Add New Bill</h1>
       </center>
        <form class="needs-validation" method='post'>
   <div class="form-col">
@@ -95,21 +95,9 @@
         <input type="number" class="form-control" name="billing_id" id="validationCustom0" required>
       </div>
       <div class="form-group col-md-3">
-        <label for="validationCustom03">Account No</label>
-        <select name="Account_no"  class="form-control" id="validationCustom03" required>
-          <option value=""></option>
-          <?php
-            $q = "SELECT * FROM `consumer`";
-            $result = mysqli_query($con, $q );
-            while($row = mysqli_fetch_assoc($result))
-            {?> 
-              <option value="<?php echo $row['Account_no'] ?>"><?php echo $row['Account_no'] ?></option> 
-
-            <?php }
-          ?>
-
-        </select>
-        <!--input type="number" class="form-control" name="Account_no" id="validationCustom03" required-->
+        <label for="validationCustom04">Account No</label>
+        <input type="number" class="form-control" value="<?php echo isset($_GET['account_no']) ? $_GET['account_no'] : null;  ?>" name="Account_no" id="validationCustom04" required>
+      </div>
       </div>
       <div  class="form-group col-md-3 name">
         <label for="validationCustom04">Name</label>
@@ -121,7 +109,7 @@
       </div>
       <div class="form-group col-md-3 reading">
         <label for="validationCustom05">Previous Reading</label>
-        <input type="number" class="form-control" name="previous_reading" id="reading" readonly="">
+        <input type="number" class="form-control" name="previous_reading" value="<?php echo isset($_GET['present_reading']) ? $_GET['present_reading'] : null;  ?>"  id="reading">
       </div>
       <div class="form-group col-md-3">
         <label for="present_reading">Present Reading</label>
@@ -192,8 +180,6 @@ function setSecondDate() {
         success: function(response,data){ 
           $('#name').val(response.First_name + " " + response.Middle_name + " " + response.Last_name);
           $('.name').show();
-          $('#reading').val(response.initial);
-          $('.reading').show();
         }, 
         // Error Handler
         error: function(xhr, textStatus, error){

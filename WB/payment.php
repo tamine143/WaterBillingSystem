@@ -145,7 +145,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="text-center">
-            <button id="btnPrint" type="button" class="btn btn-info btn-rounded btn-sm" >Print</button>
+            <button id="btnPrint" type="button" onclick="window.print()" class="btn btn-info btn-rounded btn-sm" >Print</button>
           </div>
         </div>
       </div>

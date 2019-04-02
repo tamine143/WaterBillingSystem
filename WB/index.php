@@ -29,7 +29,7 @@
 			array_push($error, "Invalid username pr password");
 			}
 		}
-	}	
+	}
 ?>
 
 <!DOCTYPE.html>
